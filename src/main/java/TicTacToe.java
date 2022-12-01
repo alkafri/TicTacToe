@@ -23,6 +23,7 @@ public class TicTacToe extends Application {
         //Board board = new Board();
         //FlowPane grid = board.getBoard();
         //border.setCenter(grid);
+        // test here what is
 
 
         Scene scene = new Scene(fxmlLoader.load(), 500, 600);
