@@ -8,4 +8,6 @@ module com.example.tictactoe {
 
     opens com.example.tictactoe to javafx.fxml;
     exports com.example.tictactoe;
+    //exports;
+    //opens to
 }

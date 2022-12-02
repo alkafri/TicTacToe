@@ -5,19 +5,16 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 
-import java.util.HashMap;
+import java.io.IOException;
 
 
 public class Board {
 
     private ImageView boxes[] = new ImageView[9];
-    private HashMap<Integer, Box> fullBoxes = new HashMap<>();
 
-    //private User user = new User();
-    //private Computer computer = new Computer();
-    //private WinnerPicker picker = new WinnerPicker();
 
-    public FlowPane getBoard() {
+    public FlowPane getBoard() throws IOException {
+
 
         FlowPane flow = new FlowPane();
         flow.setPadding(new Insets(50, 0, 0, 30));
@@ -26,12 +23,11 @@ public class Board {
         flow.setPrefWrapLength(255);
         flow.setStyle("-fx-background-color: DAE6F3");
 
-        //for (int i = 0; i < 9; i++) {
-            //boxes[i] = new ImageView(new Image(Board.class.getResourceAsStream("blank.png")));
-            //flow.getChildren().add(boxes[i]);
-        //}
 
-
+        for (int i = 0; i < 9; i++) {
+            boxes[i] = new ImageView(new Image(Board.class.getResourceAsStream("/box.png")));
+            flow.getChildren().add(boxes[i]);
+        }
 
         return flow;
     }

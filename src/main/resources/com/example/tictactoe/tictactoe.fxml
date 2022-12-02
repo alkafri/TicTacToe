@@ -5,12 +5,68 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.AmbientLight?>
+<VBox alignment="BOTTOM_CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.tictactoe.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
 
-    <Label fx:id="welcomeText"/>
+    <Label fx:id="welcomeText" alignment="TOP_CENTER" contentDisplay="BOTTOM" textOverrun="CLIP"  text="Welcome to Smart Monkeys TicTacToe Game">
+        <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.6899999976158142" green="0.4823099970817566" blue="0.0966000035405159" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="0.6899999976158142" green="0.0966000035405159" blue="0.0966000035405159" />
+                        </color>
+                    </Stop>
+                </stops>
+            </LinearGradient>
+        </textFill>
+        <font>
+            <Font name="Malgun Gothic Bold" size="18.0" />
+        </font></Label>
+
+    <Button fx:id="startButton" alignment="TOP_CENTER" blendMode="SRC_ATOP" onAction="#onHelloButtonClick" prefHeight="120.0" prefWidth="231.0" text="START" textOverrun="WORD_ELLIPSIS">
+        <font>
+            <Font name="Playbill" size="71.0" />
+        </font>
+        <effect>
+            <InnerShadow />
+        </effect>
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+        <textFill>
+            <RadialGradient centerX="0.5" centerY="0.533175355450237" focusAngle="-146.31" focusDistance="0.367816091954023" radius="0.6379310344827587">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.6899999976158142" green="0.4823099970817566" blue="0.0966000035405159" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="0.9210526347160339" green="0.03837719187140465" blue="0.03837719187140465" />
+                        </color>
+                    </Stop>
+                </stops>
+            </RadialGradient>
+        </textFill></Button>
+
+    <AmbientLight lightOn="true">
+        <color>
+            <Color red="0.15238095819950104" green="1.0" />
+        </color>
+    </AmbientLight>
 
 </VBox>
