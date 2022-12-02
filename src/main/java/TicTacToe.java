@@ -23,8 +23,10 @@ public class TicTacToe {
                 if (event.getButton() == MouseButton.PRIMARY) {
                     if (turnX) {
                         drawX();
-                    } else {
+                        turnX=false;
+                    } else if (!turnX){
                         drawO();
+                        turnX=true;
                     }
 
                     // Some form of check to se if it was a winner move?
