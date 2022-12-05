@@ -1,19 +1,13 @@
 package com.example.tictactoe;
 
-import Board.Board;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.scene.control.Label;
-
-import javafx.fxml.FXML;
 
 import java.io.IOException;
 
@@ -38,6 +32,8 @@ public class TicTacToe extends Application {
 
 
     }
+
+
     public static void main(String[] args) {
         launch();
     }

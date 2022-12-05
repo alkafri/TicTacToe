@@ -1,4 +1,4 @@
-package Board;
+package com.example.tictactoe;
 
 public class Box {
 
